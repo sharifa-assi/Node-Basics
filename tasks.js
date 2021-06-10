@@ -62,6 +62,13 @@ function unknownCommand(c){
   console.log('unknown command: "'+c.trim()+'"')
 }
 
+/**
+ * prints "all the possible help commands"
+ * This function is supposed to list all possible help commands
+ *
+ * @param  {string} data typed by the user
+ * @returns {void}
+ */
 
 function help(){
   console.log('press h for...')
