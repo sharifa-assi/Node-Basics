@@ -40,10 +40,15 @@ function onDataReceived(text) {
   else if(text === 'hi\n'){
     hi();
   }
+
+  else if (text === 'help\n'){
+    help();
+  }
   else{
     unknownCommand(text);
   }
 }
+
 
 
 /**
@@ -57,6 +62,10 @@ function unknownCommand(c){
   console.log('unknown command: "'+c.trim()+'"')
 }
 
+
+function help(){
+  console.log('press h for...')
+}
 
 /**
  * Says hello
@@ -76,6 +85,10 @@ function hi(){
 function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
+}
+
+function help(){
+  console.log('All the possible help commands:...')
 }
 
 // The following line starts the application
