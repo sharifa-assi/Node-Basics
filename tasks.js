@@ -9,7 +9,7 @@
  * @param  {string} name the name of the app
  * @returns {void}
  */
-function startApp(name){
+ function startApp(name){
   process.stdin.resume();
   process.stdin.setEncoding('utf8');
   process.stdin.on('data', onDataReceived);
@@ -34,16 +34,18 @@ function startApp(name){
  * @returns {void}
  */
 function onDataReceived(text) {
+
   if (text === 'quit\n' || text ==='exit\n') {
     quit();
   }
-  else if(text === 'hi\n'){
-    hi();
+  else if(text === 'hello\n'  || text.startsWith("hello ") || text.startsWith("hello\t") ){
+    hello(text);
   }
 
   else if (text === 'help\n'){
     help();
   }
+  
   else{
     unknownCommand(text);
   }
@@ -79,8 +81,16 @@ function help(){
  *
  * @returns {void}
  */
-function hi(){
-  console.log('hi!')
+function hello(){
+  
+  console.log('hello!');
+  
+}
+
+function hello(text){
+  text = text.replace("\n", "");
+  text = text.trim(" ");
+  console.log(text);
 }
 
 
