@@ -160,7 +160,7 @@ function help(){
     list.pop();
   }
   else if(text.substring(8) >=list.length){
-    console.log("!");
+    console.log("the number does not exist!");
   }
   else{
   list.splice(text.substring(7),1);
