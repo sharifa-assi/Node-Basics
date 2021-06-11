@@ -53,7 +53,9 @@ function onDataReceived(text) {
     add(text);
 }
 
-
+else if(text.startsWith("remove")){
+  remove(text);
+}
   else{
     unknownCommand(text);
   }
@@ -145,6 +147,25 @@ function help(){
   }
 }
 
+
+ 
+/**
+ * remove from list
+ *
+ * @returns {void}
+ */
+ function remove(text){
+  text = text.trim();
+  if(text.length == 6 || text.length == 7){
+    list.pop();
+  }
+  else if(text.substring(8) >=list.length){
+    console.log("!");
+  }
+  else{
+  list.splice(text.substring(7),1);
+}
+} 
 
 // The following line starts the application
 startApp("Sharifa")
