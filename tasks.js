@@ -57,8 +57,8 @@ else if(text.startsWith("remove")){
   remove(text);
 }
 
-else if(text.startsWith("edit")){
-  edit(text);
+else if(text.replace === b){
+  edit(b);
 }
 else if(text.startsWith("check")){
   check(text);
@@ -179,21 +179,15 @@ function help(){
 
 
 
+
 /**
- * Edit list
+ * edit
  *
  * @returns {void}
  */
- function edit(text){
-  text = text.trim();
-  if(text == "edit"){
-    console.log(error)
-  }
- else if (text == "edit"+" "+c){
-
-console.log(c);
-
- }
+ function edit(b){
+  console.log(b);
+  text3 = text.replace(b , text3)
 }
  
 /**
