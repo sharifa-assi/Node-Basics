@@ -179,36 +179,8 @@ function help(){
  *
  * @returns {void}
  */
- function edit(c){
  
 
-  c = c.replace("\n","");
-  c=  c.split(" ");
-
-  for(var i = 0;i<c[1].length;i++){
-    if(c[1][i]<"0" || c[1][i]>"9"){
-      break;
-    }
-  }
-  var str="";
-  if(i==c[1].length){
-    for(let j=2;j<c.length;j++){
-      if(j>2)
-      str+=" "+c[j];
-      else
-      str+=c[j]
-    }
-    list[i] = str;
-
-  }
-  else{
-    for(let j=1;j<c.length;j++){
-      if(j>1)
-      str+=" "+c[j];
-      else
-      str+=c[j]
-    
-} 
 
 
 // The following line starts the application
