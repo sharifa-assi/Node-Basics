@@ -17,6 +17,7 @@
   console.log("--------------------")
 }
 
+var list =['a','b','c']
 
 /**
  * Decides what to do depending on the data that was received
@@ -45,7 +46,9 @@ function onDataReceived(text) {
   else if (text === 'help\n'){
     help();
   }
-  
+  else if(text.startsWith("list")){
+    tasks(list);
+  }
   else{
     unknownCommand(text);
   }
@@ -107,6 +110,19 @@ function quit(){
 function help(){
   console.log('How I can help you?')
 }
+
+
+/**
+ * show tasks list
+ *
+ * @returns {void}
+ */
+ function tasks(list){
+  for(var i = 0; i < list.length; i++){
+    console.log(i + 1 + ") " + list[i]);
+  }
+}
+
 
 // The following line starts the application
 startApp("Sharifa")
