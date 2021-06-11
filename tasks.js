@@ -49,6 +49,11 @@ function onDataReceived(text) {
   else if(text.startsWith("list")){
     tasks(list);
   }
+  else if(text.startsWith("add ")){
+    add(text);
+}
+
+
   else{
     unknownCommand(text);
   }
@@ -66,6 +71,13 @@ function onDataReceived(text) {
 function unknownCommand(c){
   console.log('unknown command: "'+c.trim()+'"')
 }
+
+
+/**
+ * Says hello
+ *
+ * @returns {void}
+ */
 
 /**
  * prints "all the possible help commands"
@@ -111,6 +123,16 @@ function help(){
   console.log('How I can help you?')
 }
 
+
+/**
+ * add task
+ *
+ * @returns {void}
+ */
+ function add(text){
+  text = text.trim();
+  list.push(text.substring(4).trim());
+}
 
 /**
  * show tasks list
