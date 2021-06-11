@@ -150,7 +150,7 @@ function help(){
 
  
 /**
- * remove from list
+ * remove from the list
  *
  * @returns {void}
  */
