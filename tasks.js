@@ -156,7 +156,7 @@ function help(){
  */
  function remove(text){
   text = text.trim();
-  if(text.length == 6 || text.length == 7){
+  if(text.length == 6){
     list.pop();
   }
   else if(text.substring(8) >=list.length){
