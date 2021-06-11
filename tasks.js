@@ -90,7 +90,7 @@ function hello(){
 function hello(text){
   text = text.replace("\n", "");
   text = text.trim(" ");
-  console.log(text);
+  console.log(text+'!');
 }
 
 
