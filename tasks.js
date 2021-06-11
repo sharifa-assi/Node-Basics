@@ -60,7 +60,12 @@ else if(text.startsWith("remove")){
 else if(text.startsWith("edit")){
   edit(text);
 }
-
+else if(text.startsWith("check")){
+  check(text);
+}
+else if(text.startsWith("uncheck")){
+  uncheck(text);
+}
   else{
     unknownCommand(text);
   }
@@ -179,8 +184,37 @@ function help(){
  *
  * @returns {void}
  */
- 
+ function edit(text){
+  text = text.trim();
+  if(text == "edit"){
+    console.log(error)
+  }
+ else if (text == "edit"+" "+c){
 
+console.log(c);
+
+ }
+}
+ 
+/**
+ * marked as done
+ *
+ * @returns {void}
+ */
+ function check(text){
+  text = text.split(" ");
+  list[text[1]-1][0] = '✓';
+}
+
+/**
+ * unmarked
+ *
+ * @returns {void}
+ */
+function uncheck(text){
+  text = text.split(" ");
+  list[text[1]-1][0] = '';
+}
 
 
 // The following line starts the application
