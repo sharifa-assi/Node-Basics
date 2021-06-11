@@ -105,7 +105,7 @@ function quit(){
 }
 
 function help(){
-  console.log('All the possible help commands:...')
+  console.log('How I can help you?')
 }
 
 // The following line starts the application
